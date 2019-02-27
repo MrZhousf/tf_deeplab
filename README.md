@@ -10,4 +10,4 @@
 
 ### 预训练模型下载
 * 模型下载：https://github.com/tensorflow/models/blob/master/research/deeplab/g3doc/model_zoo.md
-* 项目采用deeplab_cityscapes_xception71_trainfine模型（http://download.tensorflow.org/models/deeplab_cityscapes_xception71_trainfine_2018_09_08.tar.gz）
+* 项目采用deeplab_cityscapes_xception71_trainfine模型http://download.tensorflow.org/models/deeplab_cityscapes_xception71_trainfine_2018_09_08.tar.gz
