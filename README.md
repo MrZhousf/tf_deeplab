@@ -1,5 +1,7 @@
 # tf_deeplab
-###说明
+基于deeplab v3+ DPC（密集预测单元）的图像语义分割模型。
+
+### 说明
 * 数据制作：labelme2voc.py
 * 训练：train.py
 * 评估：eval.py
