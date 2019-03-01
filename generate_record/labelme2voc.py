@@ -241,7 +241,7 @@ def create_voc_dirs(out_dir):
 if __name__ == '__main__':
     """
     1. 通过xml匹配jpg： file_util.py
-    2. 剔除尺寸和符合规范的样本：img_util->move_limit_width_height
+    2. 剔除尺寸和不符合规范的样本：img_util.py->move_limit_width_height
     3. 样本均衡处理：classifier.py->delete_appointed_label_json
     4. 生成数据分布文件：classifier.py->generate_classes_txt
     5. 划分训练数据与评估数据：classifier.py->split_train_val_data
