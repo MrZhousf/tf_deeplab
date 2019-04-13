@@ -205,6 +205,8 @@ class DeepLabDPC(object):
         else:
             checkpoint = self.trained_checkpoint
             save_dir = self.save_model_dir
+        if not os.path.exists(save_dir):
+            os.mkdir(save_dir)
         save_pb = save_dir + '/frozen_inference_graph.pb'
         shutil.copy(checkpoint+'.meta', save_dir)
         shutil.copy(checkpoint+'.index', save_dir)
