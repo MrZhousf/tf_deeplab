@@ -205,9 +205,12 @@ class DeepLabDPC(object):
         else:
             checkpoint = self.trained_checkpoint
             save_dir = self.save_model_dir
-        save_dir = save_dir + '/frozen_inference_graph.pb'
+        save_pb = save_dir + '/frozen_inference_graph.pb'
+        shutil.copy(checkpoint+'.meta', save_dir)
+        shutil.copy(checkpoint+'.index', save_dir)
+        shutil.copy(checkpoint+'.data-00000-of-00001', save_dir)
         print(checkpoint)
-        print(save_dir)
+        print(save_pb)
         export = 'python %s/export_model.py \
             --logtostderr=%s \
             --checkpoint_path=%s \
@@ -225,7 +228,7 @@ class DeepLabDPC(object):
             --inference_scales=1.0' % (self.model_dir,
                                        self.log_dir,
                                        checkpoint,
-                                       save_dir,
+                                       save_pb,
                                        self.num_classes,
                                        self.train_crop_size[0],
                                        self.train_crop_size[1],
